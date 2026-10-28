@@ -1,0 +1,12 @@
+services:
+  energous-overmold:
+    build: .
+    image: energous_overmold
+    container_name: esense_overmold
+    ports:
+      - "5060:5060"
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - FLASK_ENV=production
